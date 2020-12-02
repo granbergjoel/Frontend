@@ -1,0 +1,13 @@
+/*
+Kommentarer fungerar som i java
+*/
+
+
+/* Exempel på CSS-regel
+När jag skriver "body" i css så påverkar det SAMTLIGA body-fält i alla mina html-dokument som länkas till detta dokument.
+Regeln kan innehålla flera olika regler.
+*/
+
+body {
+    color: red;
+}
