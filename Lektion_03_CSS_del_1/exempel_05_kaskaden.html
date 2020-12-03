@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cascading</title>
+
+    <link rel="stylesheet" href="exempel_06.css">
+    <!-- exempel_06.css styr stilen på detta dokument-->
+
+    <style>
+        body{
+            color: green;
+            /* denna style trumfar link ovan, pga cascading */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Exempel 05</h1>
+    <h2>Lite om cascading (kaskaden)</h2>
+    <p style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, sit.
+    <!-- inline-style har högst prio, den kör över style-taggarna ovan-->
+    </p>
+</body>
+</html>
