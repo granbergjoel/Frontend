@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - Exempel 01</title>
+
+  <script>
+// skriv din JS-kod här
+
+
+  </script>
+
+</head>
+<body>
+  <h1>Arbeta med Document</h1>
+  <h2>Att arbeta med get document.id</h2>
+
+<div id="demo"></div>
+  <script>
+    // skriv din JS-kod här
+    //skapar ett element
+   let divElement = document.getElementById("demo");
+
+   console.log(divElement);
+    //ändrar innehållet i elementet och skriver ut det
+   divElement.innerHTML="<h1>Rubrik från javascript</h1>"
+
+  //  alert("Hello World (body)" );
+      </script>
+
+    
+</body>
+<!-- JS-kod passar bäst längst ner, närmast /body-taggen. Då laddar sidan snabbare. Det går att sätta kod även i head men då bör en sätta till defer innanför taggen för att body ska laddas först. 
+      Defer används dock endast med externa filer. -->
+</html>

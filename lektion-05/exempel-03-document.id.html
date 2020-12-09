@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - Exempel 01</title>
+
+  <script>
+// skriv din JS-kod här
+
+
+  </script>
+
+</head>
+<body>
+  <h1>Arbeta med Document</h1>
+  <h2>Att arbeta med get document.id</h2>
+
+<div id="demo"></div>
+<div id ="demo2"></div>
+<div id ="demo3">Lite text i html</div>
+<div id ="demo4">Lite text i html</div>
+  <script>
+    // skriv din JS-kod här
+
+    //skapar ett element, lägg till html via javascript
+   let divElement1 = document.getElementById("demo");
+
+   console.log(divElement1);
+    //ändrar innehållet i elementet och skriver ut det
+   divElement1.innerHTML="<h1>Rubrik från javascript</h1>"
+
+   let divElement2 = document.getElementById("demo2");
+        //lägg till text ej html
+   divElement2.textContent="<h2>Underrubrik med javascript</h2>"
+
+//ändra innehåll
+let divElement3 = document.getElementById("demo3");
+divElement3.innerHTML = "nytt innehåll";
+
+//ta bort innehåll
+let divElement4 = document.getElementById("demo4");
+divElement4.innerHTML="";
+
+//Ändra CSS med javascript, ändrar divElement1, denna går att koppla till en knapp tex på en hemsida för att manipulera innehållet
+divElement1.style.color = "#ff00ff";
+
+  //  alert("Hello World (body)" );
+      </script>
+
+    
+</body>
+<!-- JS-kod passar bäst längst ner, närmast /body-taggen. Då laddar sidan snabbare. Det går att sätta kod även i head men då bör en sätta till defer innanför taggen för att body ska laddas först. 
+      Defer används dock endast med externa filer. -->
+</html>

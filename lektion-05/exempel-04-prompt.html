@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - Exempel 01</title>
+
+  <script>
+
+
+  </script>
+
+</head>
+<body>
+  <h1>Arbeta med prompt</h1>
+  <h2>Att arbeta med prompt i webbläsaren</h2>
+
+<h3 id="hello"></h3>
+<h3 id="result"></h3>
+
+
+  <script>
+   
+      let name =  prompt("Vad heter du?");
+      console.log("Hello " + name)
+     // let hello = document.getElementById("hello");
+  //  hello.innerHTML=("Hej " + name);
+
+    document.getElementById("hello").innerHTML = "Hej " + name;
+
+
+
+    //Läsa in tal och addera
+
+    let num1 = prompt("Ange tal 1")
+    let num2 = prompt("Ange tal 2")
+    //console.log(num1 + num2) //konkatenterar! Detta då prompt alltid ger en sträng tillbaka
+    //strängen måste parseas/konverteras
+
+    console.log(Number(num1) + Number(num2));
+    
+    //ett sätt att göra det på
+//result.innerHTML=Number(num1)+Number(num2)
+
+// + före var-namn konverterar sträng till tar
+result.innerHTML =+num1 + +num2;
+  
+
+//ett till lite krångligare
+   // let resultElement = document.getElementById("result")
+    //resultElement.innerHTML= Number(num1) + Number(num2)
+    //document.getElementById("result").innerHTML(Number(num1)+Number(num2)) 
+     
+     
+     </script>
+
+      
+</body>
+
+</html>
