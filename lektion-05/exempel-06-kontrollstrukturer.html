@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempel 06 - Kontrollstrukturer</title>
+</head>
+<body>
+<h1>Några exempel på selektioner</h1>
+<h2>if - else</h2>
+
+<h3 id="result">Result: </h3>
+
+
+    <script>
+// samma som i java, t.ext if else satser
+
+let score = prompt("Ange poäng");
+
+if(score>=50){
+    congratulate(); //anropar funktionen nedan
+}else{
+encourage();
+}
+
+function congratulate(){
+    let message="Du har fått G!";
+    console.log(message);
+    alert(message);
+    document.getElementById("result").
+   
+    innerHTML+=message;
+    //med ett + före message så konkateneras texten i h3 id result med texten i functionen
+}
+
+function encourage(){
+    let message="Du har fått IG! <br> Lycka till nästa gång";
+    console.log(message);
+    document.getElementById("result").innerHTML+=message;
+}
+
+    </script>
+</body>
+</html>

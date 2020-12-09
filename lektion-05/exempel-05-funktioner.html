@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempel 05 - funktioner</title>
+</head>
+<body>
+<h1>Arbeta med funktioner JS</h1>
+
+
+<script>
+
+// en parameterlös funktion, denna måste anropas
+function hello() {
+    console.log("Hello World!")
+}
+//här sker anropet
+hello();
+
+//Funktion med en parameter
+
+function print (message){
+console.log(message);
+}
+print("Hello world!");
+
+//Funktion med 2 parametrar
+function add(num1, num2){
+    console.log(num1 + num2);
+}
+add(1,2);
+//matar vi in via prompt eller som sträng ("1","2") så blir det en konkatenering istället
+
+//en funktion med godtycklig mängd parametrar mha ...param
+function test(...param){
+console.log(param)
+}
+test(1, 2.5); //nu skapas en array med 2 variabler
+test(1,"text",2.5);
+
+//Funktion som returnerar värde
+function fullName(firstName, lastName){
+return firstName + " " + lastName
+}
+//skapar en variabel som lagrar data från fullName, skriver sedan ut den
+let name = fullName("Joel", "Granberg");
+console.log(name);
+
+//Default parameter
+
+function echo(message="Hello"){
+    console.log(message)
+}
+echo();
+    </script>
+</body>
+</html>
