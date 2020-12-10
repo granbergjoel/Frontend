@@ -1,0 +1,39 @@
+.item1 { grid-area: one; }
+.item2 { grid-area: two; }
+.item3 { grid-area: three; }
+.item4 { grid-area: four; }
+.item5 { grid-area: five; }
+.item6 { grid-area: six; }
+.item7 { grid-area: seven; }
+.item8 { grid-area: eight; }
+.item9 { grid-area: nine; }
+.item0 { grid-area: zero; }
+.itemadd { grid-area: add; }
+.itemsub { grid-area: subtract; }
+.itemdiv { grid-area: divide; }
+.itemmulti { grid-area: multiply; }
+.itemheader { grid-area: header; }
+.itemequals { grid-area: equals; }
+.itemdot { grid-area: dot; }
+.itemac { grid-area: ac; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'add subtract divide multiply'
+    'seven eight nine equals'
+    'four five six equals'
+    'one two three equals'
+    'zero dot ac equals';
+  grid-gap: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
