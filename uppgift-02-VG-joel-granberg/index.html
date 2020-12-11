@@ -19,7 +19,11 @@
 
     <div class="grid-container">
         <div class="item1"> <button onclick="x=1"; type="button" class="btn-primary">1</button> </div><!-- onclick sätt x till denna siffra, måste ta emot flera möjliga klick, stängs med att välja operator
-        Spara x i y. Vid andra onclick sätt x till denna siffra-->
+        Spara x i y. Vid andra onclick sätt x till denna siffra
+    alla knappar ska ha en onclick som lägger till info till x/lägger till info till oninput    
+när operator väljs sparas x till y
+sedan sparas ny data i x
+när equals klickas så presenteras resultatet av y+x=?  -->
         
         <div class="item2"><button type="button" class="btn-primary">2</button></div>
         
@@ -38,11 +42,12 @@
 
 
 
-        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input"></div> <!-- p-tagg som ändras med klicken, ge ett ID, input-ruta-->
+        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input"></div> <!-- ge ett ID, input-ruta, lägga till en oninput?-->
 
 
 
-        <div class="itemequals" style="background-color: yellow;"><button type="button" class="btn btn-primary">=</button></div><!--onclick så räknas y operator x ut och presenteras. -->
+        <div class="itemequals" ><button type="button" class="btn btn-primary">=</button></div><!--onclick så räknas y operator x ut och presenteras. skapa en function som gör detta -->
+
         <div class="itemdot"><button>.</button></div> <!-- onclick sätt en punkt-->
         <div class="itemac"><button type="button" class="btn btn-danger">AC</button></div><!-- nolla allt-->
        
