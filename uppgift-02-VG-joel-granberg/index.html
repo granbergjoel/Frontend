@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="script.js">
     <title>Miniräknare</title>
     <script src="script.js"></script>
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
 
     <div class="grid-container">
-        <div class="item1">1</div><!-- onclick sätt x till denna siffra, måste ta emot flera möjliga klick, stängs med att välja operator
+        <div class="item1"> <button onclick="x=1"; type="button" class="btn-primary">1</button> </div><!-- onclick sätt x till denna siffra, måste ta emot flera möjliga klick, stängs med att välja operator
         Spara x i y. Vid andra onclick sätt x till denna siffra-->
-        <div class="item2">2</div>
-        <div class="item3">3</div>
-        <div class="item4">4</div>
-        <div class="item5">5</div>
-        <div class="item6">6</div>
-        <div class="item7">7</div>
-        <div class="item8">8</div>
-        <div class="item9">9</div>
-        <div class="item0">0</div>
-        <div class="itemadd">+</div> <!-- onclick sätt operator till detta tecken-->
-        <div class="itemsub">-</div>
-        <div class="itemdiv">/</div>
-        <div class="itemmulti">*</div>
-        <div class="itemheader"></div> <!-- p-tagg som ändras med klicken-->
-        <div class="itemequals">=</div><!--onclick så räknas y operator x ut och presenteras. -->
-        <div class="itemdot">.</div> <!-- onclick sätt en punkt-->
-        <div class="itemac">AC</div><!-- nolla allt-->
+        
+        <div class="item2"><button type="button" class="btn-primary">2</button></div>
+        
+        <div class="item3"><button type="button" class="btn-primary">3</button></div>
+        <div class="item4"><button type="button" class="btn-primary">4</button></div>
+        <div class="item5"><button type="button" class="btn-primary">5</button></div>
+        <div class="item6"><button type="button" class="btn-primary">6</button> </div>
+        <div class="item7"><button type="button" class="btn-primary">7</button></div>
+        <div class="item8"><button type="button" class="btn-primary">8</button></div>
+        <div class="item9"><button type="button" class="btn-primary">9</button></div>
+        <div class="item0"><button type="button" class="btn-primary">0</button></div>
+        <div class="itemadd"><button>+</button></div> <!-- onclick sätt operator till detta tecken-->
+        <div class="itemsub"><button>-</button></div>
+        <div class="itemdiv"><button>/</button></div>
+        <div class="itemmulti"><button>*</button></div>
+        <div class="itemheader" style="background-color: white;"></div> <!-- p-tagg som ändras med klicken, ge ett ID, input-ruta-->
+        <div class="itemequals" style="background-color: yellow;"><button type="button" class="btn btn-primary">=</button></div><!--onclick så räknas y operator x ut och presenteras. -->
+        <div class="itemdot"><button>.</button></div> <!-- onclick sätt en punkt-->
+        <div class="itemac"><button type="button" class="btn btn-danger">AC</button></div><!-- nolla allt-->
        
     </div>
     
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
