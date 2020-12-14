@@ -42,17 +42,79 @@ när equals klickas så presenteras resultatet av y+x=?  -->
 
 
 
-        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input"></div> <!-- ge ett ID, input-ruta, lägga till en oninput?-->
+        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input"></div> <!-- ge ett ID, input-ruta, lägga till en oninput? då köra calculate=-->
 
 
 
-        <div class="itemequals" ><button type="button" class="btn btn-primary">=</button></div><!--onclick så räknas y operator x ut och presenteras. skapa en function som gör detta -->
+        <div class="itemequals" ><button type="button" class="btn btn-primary" >=</button></div><!--onclick så räknas y operator x ut och presenteras. skapa en function som gör detta -->
 
         <div class="itemdot"><button>.</button></div> <!-- onclick sätt en punkt-->
         <div class="itemac"><button type="button" class="btn btn-danger">AC</button></div><!-- nolla allt-->
        
     </div>
+
+<script>
+    console.log( "x" +x);
+    console.log("y"+y);
+    console.log("input" +input);
+    console.log("operator" +operator);
+    console.log("result "+result);
+    console.log("Försat initieringen slutar")
     
+   
+    function calculate(){
+ while (true){
+    index = input.indexOf("+");
+    if (index > 0 && index < lengthOfIndex) {
+        operator=input.charAt(index);
+      break;
+    }
+    index = input.indexOf("-");
+    if (index > 0 && index < lengthOfIndex) {
+        operator=input.charAt(index);
+       break;
+    }
+    index = input.indexOf("/");
+    if (index > 0 && index < lengthOfIndex) {
+        operator=input.charAt(index);
+        break;
+    }
+    index = input.indexOf("*");
+    if (index > 0 && index < lengthOfIndex) {
+        operator=input.charAt(index);
+        break;
+    }
+}
+
+     x= parseFloat(input.substring(0,index));
+     y=parseFloat(input.substring(index+1));
+     console.log("operator" +operator);
+
+ switch (operator) {
+     case '+':
+         result =(x + ""+operator + y + "=" + (x + y));
+         break;
+     case '*':
+     result =(x + "" + operator + y + " = " + (x * y));
+         break;
+     case '/':
+     result =(x + "" + operator + y + "=" + (x / y));
+         break;
+     case '-':
+     result =(x + "" + operator + y + "=" + (x - y));
+         break;
+ }
+
+
+console.log(result)
+ 
+}
+
+
+    calculate(input);
+   
+</script>
+
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
