@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+  
     <title>Miniräknare</title>
     
-
+    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
      <!-- Required meta tags -->
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,47 +43,57 @@
         <div class="itemac" data-action="clear"><button type="button" class="btn btn-danger">AC</button></div>
        
     </div>
-    <script>
-    function calculate(){
- 
-      index = input.indexOf("+");
+<script>
+
+
+    while(loopiloop){
+    index = input.indexOf("+");
       if (index > 0 && index < lengthOfIndex) {
-        
+        operator=input.charAt(index);
+       break;
       }
       index = input.indexOf("-");
       if (index > 0 && index < lengthOfIndex) {
-         
+        operator=input.charAt(index);
+         break;
       }
       index = input.indexOf("/");
       if (index > 0 && index < lengtOfIndex) {
-         
+        operator=input.charAt(index);
+        break;
       }
       index = input.indexOf("*");
       if (index > 0 && index < lengtOfIndex) {
-       
-      }
-     
-          x= parseFloat(input.substring(0,index));
-          y=parseFloat(input.substring(index+1));
+        operator=input.charAt(index);
+       break;
+        }
+        }
         
-  
-      switch (operator) {
-          case '+':
-              System.out.println(x + ""+operator + y + "=" + (x + y));
-              break;
-          case '*':
-              System.out.println(x + "" + operator + y + " = " + (x * y));
-              break;
-          case '/':
-              System.out.println(x + "" + operator + y + "=" + (x / y));
-              break;
-          case '-':
-              System.out.println(x + "" + operator + y + "=" + (x - y));
-              break;
-      }}
-    </script>
+        x= parseFloat(input.substring(0,index));
+        y=parseFloat(input.substring(index+1));
+     
 
-<script src="script.js"></script>
+    switch (operator) {
+        case '+':
+        console.log(x + ""+operator + y + "=" + (x + y));
+            break;
+        case '*':
+        console.log(x + "" + operator + y + " = " + (x * y));
+            break;
+        case '/':
+        console.log(x + "" + operator + y + "=" + (x / y));
+            break;
+        case '-':
+        console.log(x + "" + operator + y + "=" + (x - y));
+            break;
+    }
+ 
+
+   
+</script>
+   
+
+
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

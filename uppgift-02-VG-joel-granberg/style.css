@@ -13,7 +13,7 @@
 .itemdiv { grid-area: divide;background-color: black; }
 .itemmulti { grid-area: multiply; background-color: black;}
 .itemheader { grid-area: header; background-color: black;}
-.itemequals { grid-area: equals;background-color: black; }
+.itemequals {grid-area: equals;background-color: black; }
 .itemdot { grid-area: dot; background-color: black;}
 .itemac { grid-area: ac;background-color: black; }
 
