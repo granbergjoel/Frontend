@@ -1,4 +1,4 @@
-.item1 { grid-area: one; background-color: black;}
+.item1 {  grid-area: one; background-color: black;}
 .item2 { grid-area: two; background-color: black;}
 .item3 { grid-area: three; background-color: black;}
 .item4 { grid-area: four; background-color: black;}
@@ -17,7 +17,7 @@
 .itemdot { grid-area: dot; background-color: black;}
 .itemac { grid-area: ac;background-color: black; }
 
-.grid-container {
+.calculator-grid {
   display: grid;
   grid-template-areas:
     'header header header header'
@@ -32,13 +32,9 @@
   padding: 20px;
 }
 
-.grid-container > div {
+.calculator-grid > div {
     background-color: black;
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
   }
-
- div {
-
- }

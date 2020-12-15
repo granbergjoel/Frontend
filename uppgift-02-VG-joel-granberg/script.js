@@ -7,6 +7,8 @@ let index=0;
 let boolean, loopiloop = true;
 let lengthOfIndex=input.length;
 
+
+
 function calculate(){
  
     index = input.indexOf("+");
@@ -43,9 +45,4 @@ function calculate(){
         case '-':
             System.out.println(x + "" + operator + y + "=" + (x - y));
             break;
-    }
-
-
-
-    
-}
+    }}

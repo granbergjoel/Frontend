@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
     <title>Miniräknare</title>
-    <script src="script.js"></script>
+    
 
      <!-- Required meta tags -->
      <meta charset="utf-8">
@@ -14,19 +14,14 @@
  
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+     
 </head>
 <body>
 
-    <div class="grid-container">
-        <div class="item1"> <button onclick="x=1"; type="button" class="btn-primary">1</button> </div><!-- onclick sätt x till denna siffra, måste ta emot flera möjliga klick, stängs med att välja operator
-        Spara x i y. Vid andra onclick sätt x till denna siffra
-    alla knappar ska ha en onclick som lägger till info till x/lägger till info till oninput    
-när operator väljs sparas x till y
-sedan sparas ny data i x
-när equals klickas så presenteras resultatet av y+x=?  -->
-        
+    <div class="calculator-grid">
+        <div class="item1"> <button onclick="x=1"; type="button" class="btn-primary">1</button> </div>
         <div class="item2"><button type="button" class="btn-primary">2</button></div>
-        
         <div class="item3"><button type="button" class="btn-primary">3</button></div>
         <div class="item4"><button type="button" class="btn-primary">4</button></div>
         <div class="item5"><button type="button" class="btn-primary">5</button></div>
@@ -35,89 +30,64 @@ när equals klickas så presenteras resultatet av y+x=?  -->
         <div class="item8"><button type="button" class="btn-primary">8</button></div>
         <div class="item9"><button type="button" class="btn-primary">9</button></div>
         <div class="item0"><button type="button" class="btn-primary">0</button></div>
-        <div class="itemadd"><button>+</button></div> <!-- onclick sätt operator till detta tecken-->
-        <div class="itemsub"><button>-</button></div>
-        <div class="itemdiv"><button>/</button></div>
-        <div class="itemmulti"><button>*</button></div>
-
-
-
-        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input"></div> <!-- ge ett ID, input-ruta, lägga till en oninput? då köra calculate=-->
-
-
-
-        <div class="itemequals" ><button type="button" class="btn btn-primary" >=</button></div><!--onclick så räknas y operator x ut och presenteras. skapa en function som gör detta -->
-
-        <div class="itemdot"><button>.</button></div> <!-- onclick sätt en punkt-->
-        <div class="itemac"><button type="button" class="btn btn-danger">AC</button></div><!-- nolla allt-->
+        <div class="item--add" data-action="add"><button>+</button></div> 
+        <div class="item--sub" data-action="sub"><button>-</button></div>
+        <div class="item--div" data-="div"><button>/</button></div>
+        <div class="item--multi" data-action="multi"><button>*</button></div>
+        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input" >
+        </div>
+        <div class="itemequals" data-action="equals"><button type="button" class="btn btn-primary" >=</button>
+        </div>
+        <div class="itemdot" data-action="dot"><button>.</button></div>
+        <div class="itemac" data-action="clear"><button type="button" class="btn btn-danger">AC</button></div>
        
     </div>
-
-<script>
-    console.log( "x" +x);
-    console.log("y"+y);
-    console.log("input" +input);
-    console.log("operator" +operator);
-    console.log("result "+result);
-    console.log("Försat initieringen slutar")
-    
-   
+    <script>
     function calculate(){
- while (true){
-    index = input.indexOf("+");
-    if (index > 0 && index < lengthOfIndex) {
-        operator=input.charAt(index);
-      break;
-    }
-    index = input.indexOf("-");
-    if (index > 0 && index < lengthOfIndex) {
-        operator=input.charAt(index);
-       break;
-    }
-    index = input.indexOf("/");
-    if (index > 0 && index < lengthOfIndex) {
-        operator=input.charAt(index);
-        break;
-    }
-    index = input.indexOf("*");
-    if (index > 0 && index < lengthOfIndex) {
-        operator=input.charAt(index);
-        break;
-    }
-}
-
-     x= parseFloat(input.substring(0,index));
-     y=parseFloat(input.substring(index+1));
-     console.log("operator" +operator);
-
- switch (operator) {
-     case '+':
-         result =(x + ""+operator + y + "=" + (x + y));
-         break;
-     case '*':
-     result =(x + "" + operator + y + " = " + (x * y));
-         break;
-     case '/':
-     result =(x + "" + operator + y + "=" + (x / y));
-         break;
-     case '-':
-     result =(x + "" + operator + y + "=" + (x - y));
-         break;
- }
-
-
-console.log(result)
  
-}
+      index = input.indexOf("+");
+      if (index > 0 && index < lengthOfIndex) {
+        
+      }
+      index = input.indexOf("-");
+      if (index > 0 && index < lengthOfIndex) {
+         
+      }
+      index = input.indexOf("/");
+      if (index > 0 && index < lengtOfIndex) {
+         
+      }
+      index = input.indexOf("*");
+      if (index > 0 && index < lengtOfIndex) {
+       
+      }
+     
+          x= parseFloat(input.substring(0,index));
+          y=parseFloat(input.substring(index+1));
+        
+  
+      switch (operator) {
+          case '+':
+              System.out.println(x + ""+operator + y + "=" + (x + y));
+              break;
+          case '*':
+              System.out.println(x + "" + operator + y + " = " + (x * y));
+              break;
+          case '/':
+              System.out.println(x + "" + operator + y + "=" + (x / y));
+              break;
+          case '-':
+              System.out.println(x + "" + operator + y + "=" + (x - y));
+              break;
+      }}
+    </script>
 
-
-    calculate(input);
-   
-</script>
-
+<script src="script.js"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
+    
+}
