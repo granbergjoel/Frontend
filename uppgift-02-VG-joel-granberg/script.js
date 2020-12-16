@@ -134,9 +134,53 @@ function clear(){
 let btnEquals = document.getElementById('equals');
 btnEquals.addEventListener('click', calculate)
 function calculate(){
-   
+ let index=-1;
+ console.log('före loop')
+ let findOperator=true;
+ 
+  while(index=-1){
+    index = input.indexOf("+");
+    if (index != -1) {
+        findOperator=false;
+        break;
+    }
+    index = input.indexOf("-");
+    if (index != -1)  {
+        findOperator=false;
+        break;
+    }
+    index = input.indexOf("/");
+    if (index != -1) {
+        findOperator=false;
+        break;
+    }
+    index = input.indexOf("*");
+    if (index != -1) {
+        findOperator=false;
+        break;
+    }
+}
+console.log('efter loop')
+console.log(index)
+       let x= parseFloat(input.substring(0,index));
+       let y=parseFloat(input.substring(index+1));
+       let operator= input.charAt[index];
+      console.log(operator)
+    switch (operator) {
+        case '+':
+            console.log(x + " "+ operator + y + " = " + (x + y));
+            break;
+        case '*':
+            console.log(x + "" + operator + y + " = " + (x * y));
+            break;
+        case '/':
+            console.log(x + "" + operator + y + "=" + (x / y));
+            break;
+        case '-':
+            console.log(x + "" + operator + y + "=" + (x - y));
+            break;
+    }
+
 }
 
-
- 
 
