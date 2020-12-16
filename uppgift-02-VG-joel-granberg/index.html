@@ -1,53 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="sv">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
     <link rel="stylesheet" href="style.css">
+    <title>Exempel 01 - JavaScript</title>
+  </head>
+  <body>
+    <div class="calculator">
+        <div class="calculator-display">
+            <input type="text" id="text">
+                </div>
   
-    <title>Miniräknare</title>
-    
-    <link rel="stylesheet" href="script.js">
-    <script src="script.js"></script>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-     
-</head>
-<body>
-
-    <div class="calculator-grid">
-        <div class="item1"> <button onclick="x=1"; type="button" class="btn-primary">1</button> </div>
-        <div class="item2"><button type="button" class="btn-primary">2</button></div>
-        <div class="item3"><button type="button" class="btn-primary">3</button></div>
-        <div class="item4"><button type="button" class="btn-primary">4</button></div>
-        <div class="item5"><button type="button" class="btn-primary">5</button></div>
-        <div class="item6"><button type="button" class="btn-primary">6</button> </div>
-        <div class="item7"><button type="button" class="btn-primary">7</button></div>
-        <div class="item8"><button type="button" class="btn-primary">8</button></div>
-        <div class="item9"><button type="button" class="btn-primary">9</button></div>
-        <div class="item0"><button type="button" class="btn-primary">0</button></div>
-        <div class="item--add" data-action="add"><button>+</button></div> 
-        <div class="item--sub" data-action="sub"><button>-</button></div>
-        <div class="item--div" data-="div"><button>/</button></div>
-        <div class="item--multi" data-action="multi"><button>*</button></div>
-        <div class="itemheader"  style="background-color: black;"><input type="text" id="input" name="input" >
+        <div class="calculator-keys">
+          <button id="plus">+</button>
+          <button id="minus">-</button>
+          <button id="times">*</button>
+          <button id="divide">÷</button>
+          <button id="one">1</button>
+          <button id="two">2</button>
+          <button id="three">3</button>
+          <button id="allClear">AC</button>
+          <button id="four">4</button>
+          <button id="five">5</button>
+          <button id="six">6</button>
+          <button id="comma">.</button>
+          <button id="seven">7</button>
+          <button id="eight">8</button>
+          <button id="nine">9</button>
+          <button id="equals">=</button>
+          <button id="zero">0</button>
         </div>
-        <div class="itemequals" data-action="equals"><button type="button" class="btn btn-primary" >=</button>
-        </div>
-        <div class="itemdot" data-action="dot"><button>.</button></div>
-        <div class="itemac" data-action="clear"><button type="button" class="btn btn-danger">AC</button></div>
-       
+      </div>
     </div>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</body>
+
+    <script src="script.js"></script>
+       
+  </body>
 </html>
-    
-}

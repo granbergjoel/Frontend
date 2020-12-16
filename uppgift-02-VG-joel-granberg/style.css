@@ -1,40 +1,14 @@
-.item1 {  grid-area: one; background-color: black;}
-.item2 { grid-area: two; background-color: black;}
-.item3 { grid-area: three; background-color: black;}
-.item4 { grid-area: four; background-color: black;}
-.item5 { grid-area: five; background-color: black;}
-.item6 { grid-area: six; background-color: black;}
-.item7 { grid-area: seven; background-color: black;}
-.item8 { grid-area: eight; background-color: black;}
-.item9 { grid-area: nine;background-color: black; }
-.item0 { grid-area: zero; background-color: black;}
-.itemadd { grid-area: add;background-color: black; }
-.itemsub { grid-area: subtract; background-color: black;}
-.itemdiv { grid-area: divide;background-color: black; }
-.itemmulti { grid-area: multiply; background-color: black;}
-.itemheader { grid-area: header; background-color: black;}
-.itemequals {grid-area: equals;background-color: black; }
-.itemdot { grid-area: dot; background-color: black;}
-.itemac { grid-area: ac;background-color: black; }
-
-.calculator-grid {
-  display: grid;
-  grid-template-areas:
-    'header header header header'
-    'add subtract divide multiply'
-    'seven eight nine equals'
-    'four five six equals'
-    'one two three equals'
-    'zero dot ac equals';
-    justify-content: start;
-  grid-gap: 0px;
-  background-color: white;
-  padding: 20px;
+.calculator-keys { 
+  Display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
 }
 
-.calculator-grid > div {
-    background-color: black;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
-  }
+.calculator-keys{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
