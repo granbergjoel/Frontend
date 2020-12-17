@@ -1,7 +1,17 @@
 // VARIABLER SOM SKA MANIPULERAS
 let input = "";
 let x="";
+let z="";
 
+let bntSubmit = document.getElementById('submit')
+bntSubmit.addEventListener('click', addInput)
+function addInput(){    
+z=document.getElementById('userInput')
+
+    input=z.value;
+    
+    calculate()
+}
 
 // SAMTLIGA KNAPPAR MED EVENT!!!
 let btnPlus = document.getElementById('plus');
@@ -133,54 +143,57 @@ function clear(){
 
 let btnEquals = document.getElementById('equals');
 btnEquals.addEventListener('click', calculate)
+
 function calculate(){
- let index=-1;
- console.log('före loop')
- let findOperator=true;
- 
-  while(index=-1){
+
+    // OM TOM - return
+ let index="";
+ let operator="";
+ let lengthOfIndex=input.length;
+
+
+  while(true){
     index = input.indexOf("+");
-    if (index != -1) {
-        findOperator=false;
+    if (index > 0 && index < lengthOfIndex) {
+        operator= input.charAt([index]);
         break;
     }
     index = input.indexOf("-");
-    if (index != -1)  {
-        findOperator=false;
+    if (index > 0 && index < lengthOfIndex) {
+        operator= input.charAt([index]);
         break;
     }
     index = input.indexOf("/");
-    if (index != -1) {
-        findOperator=false;
+    if (index > 0 && index < lengthOfIndex) {
+        operator= input.charAt([index]);
         break;
     }
     index = input.indexOf("*");
-    if (index != -1) {
-        findOperator=false;
+    if (index > 0 && index < lengtOfIndex) {
+        operator= input.charAt([index]);
         break;
     }
 }
-console.log('efter loop')
-console.log(index)
+
        let x= parseFloat(input.substring(0,index));
        let y=parseFloat(input.substring(index+1));
-       let operator= input.charAt[index];
-      console.log(operator)
+      
+     
     switch (operator) {
         case '+':
-            console.log(x + " "+ operator + y + " = " + (x + y));
+            console.log(x + " "+ operator +" "+ y + " = " + (x + y));
             break;
         case '*':
-            console.log(x + "" + operator + y + " = " + (x * y));
+            console.log(x + " " + operator +" "+ y + " = " + (x * y));
             break;
         case '/':
-            console.log(x + "" + operator + y + "=" + (x / y));
+            console.log(x + " " + operator +" "+ y + " = " + (x / y));
             break;
         case '-':
-            console.log(x + "" + operator + y + "=" + (x - y));
+            console.log(x + " " + operator +" "+ y + " = " + (x - y));
             break;
     }
-
+clear();
 }
 
 
