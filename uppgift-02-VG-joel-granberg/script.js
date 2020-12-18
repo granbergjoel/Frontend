@@ -1,4 +1,4 @@
-// VARIABLER SOM SKA MANIPULERAS
+// VARIABLER SOM SKA MANIPULERAS. INPUT ÄR EN STRÄNG DÄR JAG SPARAR ALL INDATA, DEN RÄKNAS SEDAN UT LÄNGRE NER I CALCULATE
 let input = "";
 let x="";
 let z="";
@@ -7,13 +7,32 @@ let bntSubmit = document.getElementById('submit')
 bntSubmit.addEventListener('click', addInput)
 function addInput(){    
 z=document.getElementById('userInput')
+input=input+z.value;
+console.log(input)
 
-    input=z.value;
+/*
+HÄR KÖRDE JAG FAST. DETTA VAR TÄNKT ATT VARA MIN FELSÖKNING FÖR FELAKTIGA KNAPPTRYCK, TILL EXEMPEL OM ANVÄNDAREN SLÅR IN BOKSTÄVER. OM DET INTE ÄR SIFFROR ELLER "." SÅ SKA EN POP-UP RUTA KOMMA. JAG FÖRSÖKTE SPARA ENSTAKA CHAR I EN VARIABEL JAG DÖPT TILL 'CHECK' MEN JAG FICK DET INTE ATT FUNGERA. JAG TAR GÄRNA EMOT FEEDBACK PÅ HUR JAG KAN LÖSA DETTA. 
+
+for (let i = 0; i < input.length; i++) {
+    let check;
+
+    check = input.charAt[i];
+    console.log(check)
+    if (check=="0"||"1"||"2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"0"||"."){
+      //  input= input +z.value; 
+    //    console.log(input)
+    console.log("check" +check)
+            }
+            else{
+        window.alert("Bara siffror är tillåtna, försök igen");
+        input="";
+    }
     
-    calculate()
 }
+*/
 
-// SAMTLIGA KNAPPAR MED EVENT!!!
+}
+// SAMTLIGA KNAPPAR MED EVENT, VID TRYCK LÄGGS TECKNET TILL I STRÄNGEN. 
 let btnPlus = document.getElementById('plus');
 btnPlus.addEventListener('click', addPlus)
 function addPlus(){
@@ -140,14 +159,16 @@ function clear(){
     x='';
     input='';
 }
-
+// HÄR AKTIVERAS UTRÄKNINGEN, INPUT RÄKNAS UT I CALCULATE
 let btnEquals = document.getElementById('equals');
 btnEquals.addEventListener('click', calculate)
 
+
+// FUNKTIONEN CALCULATE IDENTIFIERAR OPERATORTECKNET, DELAR SEDAN STRÄNGEN I 2 TAL, DET SOM KOMMER FÖRE OPERATORN OCH DET SOM KOMMER EFTER. SEDAN GÖRS UTRÄKNINGEN OCH PRESENTERAS I EN RUTA. SIST SÅ RENSAS INPUT SÅ ATT EN NY UTRÄKNING KAN GÖRAS
 function calculate(){
 
-    // OM TOM - return
- let index="";
+
+    let index="";
  let operator="";
  let lengthOfIndex=input.length;
 
@@ -169,7 +190,7 @@ function calculate(){
         break;
     }
     index = input.indexOf("*");
-    if (index > 0 && index < lengtOfIndex) {
+    if (index > 0 && index < lengthOfIndex) {
         operator= input.charAt([index]);
         break;
     }
@@ -182,16 +203,21 @@ function calculate(){
     switch (operator) {
         case '+':
             console.log(x + " "+ operator +" "+ y + " = " + (x + y));
+            window.alert(x + " "+ operator +" "+ y + " = " + (x + y));
             break;
         case '*':
             console.log(x + " " + operator +" "+ y + " = " + (x * y));
+            window.alert(x + " " + operator +" "+ y + " = " + (x * y));
             break;
         case '/':
             console.log(x + " " + operator +" "+ y + " = " + (x / y));
+            window.alert(x + " " + operator +" "+ y + " = " + (x / y));
             break;
         case '-':
             console.log(x + " " + operator +" "+ y + " = " + (x - y));
+            window.alert(x + " " + operator +" "+ y + " = " + (x - y));
             break;
+            //Lägg till alert för att visa resultat
     }
 clear();
 }
