@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempel 05</title>
+</head>
+<body>
+    <h1>Exempel 05</h1>
+    <h2>Events</h2>
+    
+    <h3>Demo på knappar / onclick som anropar en JS-funtion</h3>
+
+    <button onclick="hello()">
+    Klicka för att anropa en funktion      
+    </button>
+
+    <button onclick="clearDemo()">
+      Klicka hör för att ta bort texten nedan
+    </button>
+    
+    <p id="demo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia eaque ea tempore nemo repellendus voluptatibus, nisi praesentium libero consequuntur eligendi vel suscipit iusto laboriosam harum corporis. Eaque aperiam architecto quibusdam?</p>
+       
+<p onclick="this.style.display='none'" onmouseover="this.style.color='green'">
+    Klicka här för att ta bort stycket. <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, qui ea nihil exercitationem, hic illo saepe, consequuntur nemo similique ex eaque esse nobis harum pariatur quae doloribus nam. Autem, laborum.</p>
+
+<hr>
+
+
+<button onclick="getTime();">What is the time now?</button>
+<h1 id="time"></h1>
+
+
+<script>
+function hello(){
+  let p =   document.getElementById('demo');
+    p.innerHTML="Välkommen till Händelsehantering i JS";
+    p.style.display='block';
+    }
+function clearDemo(){
+    let p =   document.getElementById('demo');
+   // p.innerHTML="";
+    p.style.display='none';
+    }
+function getTime() {
+document.getElementById('time').innerHTML =
+new Date().toLocalTimeString();
+}
+</script>
+
+</body>
+</html>

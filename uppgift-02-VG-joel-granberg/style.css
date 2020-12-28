@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .item1 {  grid-area: one; background-color: black;}
 .item2 { grid-area: two; background-color: black;}
 .item3 { grid-area: three; background-color: black;}
@@ -38,3 +39,19 @@
     padding: 20px 0;
     font-size: 30px;
   }
+=======
+.calculator-keys { 
+  Display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.calculator-keys{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
+>>>>>>> 896e66e601411622874981ab01b9b9e482ada92a

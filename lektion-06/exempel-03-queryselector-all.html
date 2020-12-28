@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempel 03</title>
+
+    <style>
+       #one{
+           color: green;
+           font-size: 3em;
+       }
+
+       .cool{
+           background-color: black;
+           color: white;
+       }
+    </style>
+</head>
+<body>
+    <h1 id="one">Exempel 3</h1>
+  
+    <h1>Rubriken igen</h1>
+
+    <p class="cool"> STYCKE 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus, officiis libero illum ipsam ad minus soluta, eligendi reiciendis doloremque magnam perspiciatis autem voluptatum saepe a recusandae quo illo consectetur.</p>
+
+    <p> STYCKE 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, explicabo unde nemo distinctio velit, quisquam repellendus asperiores laborum in, cupiditate facere quam eveniet rem corporis dolorum libero nostrum. Architecto, numquam.</p>
+
+    <p class="cool"> STYCKE 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, omnis facere adipisci rem nulla perferendis iure ut, praesentium ratione totam velit atque tempore molestiae repellat! Rem sint architecto culpa dolorem.</p>
+    
+    <script>
+
+        //Hitta HTML-element med hjälp av CSS-selektor
+      let rubrikOne =  document.querySelector('#one')
+      console.log(rubrikOne)
+
+
+      //hitta flera element med CSS-selektorer
+      let paragraphs = document.querySelectorAll('.cool');
+        console.log(paragraphs);
+
+    </script>
+</body>
+</html>

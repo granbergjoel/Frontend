@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exempel 01</title>
+</head>
+<body>
+    <h1>Exempel 01</h1>
+    <h2>DOM queries</h2>
+<h3>Metoden getElementById()</h3>
+
+<div id="demo"></div>
+
+<script>
+    //genom att skapa en variabel (let) så kan variabeln användas på flera olika ställen. Man manipulerar alltså variabeln för att ändra dokumentet, inte själva dokumentet
+let demo = document.getElementById('demo')
+//referens till elementet oven(div klassen demo)
+console.log(demo);
+
+
+//ändra css
+demo.style.backgroundColor = 'maroon';
+demo.style.color='#ffffff';
+demo.style.padding='10px';
+demo.style.fontSize='20px';
+demo.style.textTransform ='uppercase';
+
+//dölj innehåll med CSS
+// demo.style.display='none';
+
+//ändra innehåll i 
+demo.innerHTML="Exempel på DOM-metoden getElementById()"
+
+
+//Egenskapen body i DOM
+console.log(document);
+document.body.style.backgroundColor='#ff00ff';
+
+</script>
+</body>
+</html>
