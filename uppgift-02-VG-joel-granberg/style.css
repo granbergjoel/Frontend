@@ -17,7 +17,7 @@
 .itemdot { grid-area: dot; background-color: black;}
 .itemac { grid-area: ac;background-color: black; }
 
-.calculator-grid {
+.calculator {
   display: grid;
   grid-template-areas:
     'header header header header'
@@ -32,7 +32,7 @@
   padding: 20px;
 }
 
-.calculator-grid > div {
+.calculator > div {
     background-color: black;
     text-align: center;
     padding: 20px 0;
